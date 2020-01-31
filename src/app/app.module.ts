@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { ProveedoresService } from './servicios/proveedores.service';
 import { ProveedoresComponent } from './proveedores/proveedores/proveedores.component';
+import { FormularioComponent } from './proveedores/formulario/formulario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProveedoresComponent
+    ProveedoresComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
