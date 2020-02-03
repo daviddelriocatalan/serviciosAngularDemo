@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import {Proveedor} from '../modelos/proveedor.modelo';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +15,7 @@ export class ProveedoresService {
     cp: '28.010',
     localidad: 'Madrid',
     provincia: 'Madrid',
-    telefono: 911111111,
+    telefono: 961092000,
     email: 'info@telefonica.com',
     contacto: 'Juan Pérez'
     },
@@ -24,7 +26,7 @@ export class ProveedoresService {
     cp: '28.015',
     localidad: 'Madrid',
     provincia: 'Madrid',
-    telefono: 922222222,
+    telefono: 961092237,
     email: 'info@iberdrola.com',
     contacto: 'Laura Martínez'
     }
@@ -43,6 +45,12 @@ export class ProveedoresService {
     let pos = this.proveedores.findIndex(n => n.cif == cif);
     this.proveedores.splice(pos, 1);
     console.log(this.proveedores);
+  }
+
+  anyadirProveedor(value : Proveedor){
+    console.log("SERVICE");
+    console.log(value);
+    this.proveedores.push(value);
   }
 
   constructor() { }
